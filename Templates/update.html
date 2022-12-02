@@ -7,11 +7,11 @@
 {% endblock %}
 
 {% block body %}
-    <h1>UPDATE</h1>
+    <h1>Edit</h1>
     <p>Edit a Recipe {{task.content}}</p>
 
     <form action="/update/{{task.id}}" method="POST">
-        <input type="text" name="contentNew" id="contentNew" placeholder="Add a new task" required>
-        <input type="submit" value="Update task" >
+        <input type="text" name="contentNew" id="contentNew" placeholder="Edit the recipe" required>
+        <input type="submit" value="Update Recipe" >
     </form>
 {% endblock %}
