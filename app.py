@@ -3,11 +3,11 @@ db.create_all()
 @app.route('/add', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        task_content = request.form['content']
-        new_task = Todo(content=task_content)
+        task.content = request.form['content']
+        task_content = Todo(content=task.content)
 
         try:
-            db.session.add(new_task)
+            db.session.add(content)
             db.session.commit()
             return redirect('/')
         except:
